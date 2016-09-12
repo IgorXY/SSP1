@@ -9,8 +9,7 @@ namespace SortTest
         [TestMethod]
         public void TestSort()
         {
-            string s1 = "";
-            string s2 = "";
+            
             int count = 10;
             int[] arr1 = new int[count];
             int[] arr2 = new int[count];
@@ -22,11 +21,8 @@ namespace SortTest
             }
             MyQuickSort.QuickSort<int>(arr1, 0, arr1.Length - 1);
             Array.Sort<int>(arr2);
-            for (int i = 0; i < count; i++)
-            {
-                s1 += arr1[i].ToString() + ' ';
-                s2 += arr2[i].ToString() + ' ';
-            }
+            string s1 = MakeString(arr1);
+            string s2 = MakeString(arr2);
             Assert.AreEqual(s2, s1, null, "Sort failed");
         }
 
@@ -38,16 +34,22 @@ namespace SortTest
             Assert.IsNull(arr1);
         }
 
-        [TestMethod]
-        public void TestSortEqual()
+        public string MakeString(int[] arr)
         {
-            int[] arr = { 1, 1, 1, 1, 1 };
             string s1 = "";
-            MyQuickSort.QuickSort<int>(arr, 0, arr.Length - 1);
             for (int i = 0; i < arr.Length; i++)
             {
                 s1 += arr[i].ToString() + ' ';
             }
+            return s1;
+        }
+
+        [TestMethod]
+        public void TestSortEqual()
+        {
+            int[] arr = { 1, 1, 1, 1, 1 };
+            MyQuickSort.QuickSort<int>(arr, 0, arr.Length - 1);
+            string s1 = MakeString(arr);
             Assert.AreEqual("1 1 1 1 1 ", s1, null, "Sort failed");
         }
 
@@ -58,6 +60,14 @@ namespace SortTest
             int[] arr2 = new int[0];
             MyQuickSort.QuickSort<int>(arr1, 0, arr1.Length - 1);
             CollectionAssert.AreEqual(arr2, arr1);
+        }
+        [TestMethod]
+        public void TestSortReversed()
+        {
+            int[] arr = { 10, 9, 8, 7, 6 };
+            MyQuickSort.QuickSort<int>(arr, 0, arr.Length - 1);
+            string s1 = MakeString(arr);
+            Assert.AreEqual("6 7 8 9 10 ", s1, null, "Sort failed");
         }
     }
 }
