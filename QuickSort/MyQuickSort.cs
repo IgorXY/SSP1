@@ -26,15 +26,19 @@ namespace QuickSort
         }
 
         public static void QuickSort<T>(T[] m, int a, int b) where T : IComparable<T>// a - начало подмножества, b - конец
-        {                                        // для первого вызова: a = 0, b = <элементов в массиве> - 1
-            /*if (a >= b) return;
-            int c = Partition(m, a, b);
-            QuickSort(m, a, c - 1);
-            QuickSort(m, c + 1, b);*/
+        {
+            if (m != null)
+            {
+                // для первого вызова: a = 0, b = <элементов в массиве> - 1
+                if (a >= b) return;
+                int c = Partition(m, a, b);
+                QuickSort(m, a, c - 1);
+                QuickSort(m, c + 1, b);
+            }
         }
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
+            /*string input = Console.ReadLine();
             int count;
             int.TryParse(input, out count);
             int[] arr = new int[count];
@@ -50,7 +54,7 @@ namespace QuickSort
             {
                 Console.Write(arr[i].ToString() + ' ');
             }
-            Console.ReadLine();
+            Console.ReadLine();*/
         }
 
                 

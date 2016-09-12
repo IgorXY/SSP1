@@ -20,14 +20,22 @@ namespace SortTest
                 arr1[i] = rand.Next(100);
                 arr2[i] = arr1[i];
             }
-            MyQuickSort.QuickSort<int>(arr1, 0, 9);
+            MyQuickSort.QuickSort<int>(arr1, 0, arr1.Length - 1);
             Array.Sort<int>(arr2);
             for (int i = 0; i < count; i++)
             {
-                s1 += arr1[i].ToString() + ' '; 
+                s1 += arr1[i].ToString() + ' ';
                 s2 += arr2[i].ToString() + ' ';
             }
             Assert.AreEqual(s2, s1, null, "Sort failed");
+        }
+
+        [TestMethod]
+        public void TestSortNull()
+        {
+            int[] arr1 = null;
+            MyQuickSort.QuickSort<int>(arr1, 0, 0);
+            Assert.IsNull(arr1);
         }
     }
 }
