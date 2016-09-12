@@ -37,5 +37,18 @@ namespace SortTest
             MyQuickSort.QuickSort<int>(arr1, 0, 0);
             Assert.IsNull(arr1);
         }
+
+        [TestMethod]
+        public void TestSortEqual()
+        {
+            int[] arr = { 1, 1, 1, 1, 1 };
+            string s1 = "";
+            MyQuickSort.QuickSort<int>(arr, 0, arr.Length - 1);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                s1 += arr[i].ToString() + ' ';
+            }
+            Assert.AreEqual("1 1 1 1 1 ", s1, null, "Sort failed");
+        }
     }
 }
