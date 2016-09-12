@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuickSort
 {
-    class Program
+    public class MyQuickSort
     {
         static int Partition<T>(T[] m, int a, int b)
             where T : IComparable<T>
@@ -25,7 +25,7 @@ namespace QuickSort
             return i - 1;                        // в индексе i хранится <новая позиция элемента m[b]> + 1
         }
 
-        static void QuickSort<T>(T[] m, int a, int b) where T : IComparable<T>// a - начало подмножества, b - конец
+        public static void QuickSort<T>(T[] m, int a, int b) where T : IComparable<T>// a - начало подмножества, b - конец
         {                                        // для первого вызова: a = 0, b = <элементов в массиве> - 1
             if (a >= b) return;
             int c = Partition(m, a, b);
@@ -34,16 +34,19 @@ namespace QuickSort
         }
         static void Main(string[] args)
         {
-            int[] arr = new int[10];
+            string input = Console.ReadLine();
+            int count;
+            int.TryParse(input, out count);
+            int[] arr = new int[count];
             Random rand = new Random();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < count; i++)
             {
                 arr[i] = rand.Next(100);
                 Console.Write(arr[i].ToString()+' ');
             }
             QuickSort(arr, 0, arr.Length - 1);
             Console.WriteLine();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < count; i++)
             {
                 Console.Write(arr[i].ToString() + ' ');
             }

@@ -1,0 +1,9 @@
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\obj\Debug\SortTest.csprojResolveAssemblyReference.cache
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\bin\Debug\SortTest.dll
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\bin\Debug\SortTest.pdb
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\bin\Debug\QuickSort.exe
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\bin\Debug\QuickSort.pdb
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\obj\Debug\SortTest.dll
+Y:\Учеба-5\СПП\1\QuickSort\SSP1\SortTest\obj\Debug\SortTest.pdb
