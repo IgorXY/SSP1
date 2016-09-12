@@ -34,7 +34,7 @@ namespace SortTest
             Assert.IsNull(arr1);
         }
 
-        public string MakeString(int[] arr)
+        public string MakeString<T>(T[] arr)
         {
             string s1 = "";
             for (int i = 0; i < arr.Length; i++)
@@ -69,5 +69,14 @@ namespace SortTest
             string s1 = MakeString(arr);
             Assert.AreEqual("6 7 8 9 10 ", s1, null, "Sort failed");
         }
+        [TestMethod]
+        public void TestSortString()
+        {
+            string[] sarr = { "zero", "batman", "69", "sponge bob", "squere paints", "iron maiden" };
+            MyQuickSort.QuickSort<string>(sarr, 0, sarr.Length - 1);
+            string s1 = MakeString<string>(sarr);
+            Assert.AreEqual("69 batman iron maiden sponge bob squere paints zero ", s1, null, "Sort failed");
+        }
+
     }
 }
