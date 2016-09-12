@@ -50,5 +50,14 @@ namespace SortTest
             }
             Assert.AreEqual("1 1 1 1 1 ", s1, null, "Sort failed");
         }
+
+        [TestMethod]
+        public void TestSortZeroCount()
+        {
+            int[] arr1 = new int[0];
+            int[] arr2 = new int[0];
+            MyQuickSort.QuickSort<int>(arr1, 0, arr1.Length - 1);
+            CollectionAssert.AreEqual(arr2, arr1);
+        }
     }
 }
