@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using QuickSort;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,7 @@ namespace QuickSort
 {
     public class MyQuickSort
     {
+        
         static int Partition<T>(T[] m, int a, int b)
             where T : IComparable<T>
         {
@@ -38,7 +41,7 @@ namespace QuickSort
         }
         static void Main(string[] args)
         {
-            /*string input = Console.ReadLine();
+            string input = Console.ReadLine();
             int count;
             int.TryParse(input, out count);
             int[] arr = new int[count];
@@ -54,7 +57,7 @@ namespace QuickSort
             {
                 Console.Write(arr[i].ToString() + ' ');
             }
-            Console.ReadLine();*/
+            Console.ReadLine();
         }
 
                 

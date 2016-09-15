@@ -9,4 +9,3 @@ Y:\Учеба-5\СПП\1\QuickSort\SSP1\QuickSort\obj\Debug\QuickSort.exe
 Y:\Учеба-5\СПП\1\QuickSort\SSP1\QuickSort\obj\Debug\QuickSort.pdb
 Y:\Учеба-5\СПП\1\QuickSort\SSP1\QuickSort\bin\Debug\QuickSort.exe
 Y:\Учеба-5\СПП\1\QuickSort\SSP1\QuickSort\bin\Debug\QuickSort.pdb
-Y:\Учеба-5\СПП\1\QuickSort\SSP1\QuickSort\obj\Debug\QuickSort.csprojResolveAssemblyReference.cache
