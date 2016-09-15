@@ -21,9 +21,10 @@ namespace SortTest
             }
             MyQuickSort.QuickSort<int>(arr1, 0, arr1.Length - 1);
             Array.Sort<int>(arr2);
-            string s1 = MakeString(arr1);
+            /*string s1 = MakeString(arr1);
             string s2 = MakeString(arr2);
-            Assert.AreEqual(s2, s1, null, "Sort failed");
+            Assert.AreEqual(s2, s1, null, "Sort failed");*/
+            CollectionAssert.AreEqual(arr2, arr1);
         }
 
         [TestMethod]
